@@ -5,7 +5,6 @@ pipeline {
              when {
                  branch 'development'
                  }
-             }
              steps {
                  sh 'echo "Hello, World"'
                  sh '''
@@ -13,6 +12,7 @@ pipeline {
                      ls -lah
                  '''
              }
+         }
          stage('Lint HTML') {
               steps {
                   sh 'tidy -q -e *.html'
